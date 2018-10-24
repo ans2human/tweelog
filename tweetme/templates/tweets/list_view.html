@@ -1,0 +1,15 @@
+
+{% for object in object %}
+
+
+<ul>
+<li>
+<a href="">{{ object.content }}</a>
+{{ object.user }}
+{{ object.timestamp}}
+{{ object.timestamp|timesince }} ago
+</li>
+</ul>
+
+
+{% endfor %}
