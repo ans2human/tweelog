@@ -4,12 +4,16 @@
 
 <ul>
 <li>
-<a href="">{{ object.content }}</a>
+{{ object.id }} -<a href=""> {{ object.content }}</a>
 {{ object.user }}
 {{ object.timestamp}}
 {{ object.timestamp|timesince }} ago
 </li>
 </ul>
+{% empty %}
 
-
+{% if request.GET.q %}
+<p>No Tweets Found</p>
+{% else %}
+<p>No tweets yet</p>
 {% endfor %}
